@@ -1,16 +1,16 @@
 import React from "react";
 
-function GameCard({name, description, image, role, link, buttonStyle})
+function AppCard({name, description, image, appLink, codeLink, role, buttonStyle})
 {
-    function openInNewTab()
+    function openInNewTab(url)
     {
-        window.open({link}, "_blank", "noreferrer");
+        window.open(url, "_blank", "noreferrer");
     }
 
     return (
         <div className="bg-white placeholder:shadow-md rounded-xl flex flex-1 flex-col justify-between overflow-hidden">
             
-            <div>
+            <div className="">
                 <img className="shadow-lg shadow-black/20"
                 src={image} 
                 alt={name}
@@ -24,11 +24,18 @@ function GameCard({name, description, image, role, link, buttonStyle})
                 </div>
             </div>   
                
-            <div className="flex flex-col justify-center items-center">
+            <div className="grid grid-cols-2 justify-center items-center">
                     <button 
-                        class={buttonStyle + " flex justify-center px-4"}
-                        onClick={() => openInNewTab({link})}
-                    >store page
+                        class={buttonStyle}
+                        onClick={() => openInNewTab({codeLink})}
+                    >code
+                    </button>
+
+                    <button 
+                        class={buttonStyle}
+                        onClick={() => openInNewTab({appLink})}
+                    >
+                        app
                     </button>
             </div> 
 
@@ -36,4 +43,4 @@ function GameCard({name, description, image, role, link, buttonStyle})
     );
 }
 
-export default GameCard;
+export default AppCard;
