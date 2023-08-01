@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import {FaBars, FaTimes} from 'react-icons/fa';
+import {motion} from 'framer-motion';
 
 const NavBar = () => {
     const [nav, setNav] = useState(false);
@@ -25,28 +26,28 @@ const NavBar = () => {
     ]
 return(
     <div 
-    className="flex justify-between items-center 
-    w-full h-20 text-white fixed bg-black px-4"
+    className="relative flex justify-between items-center 
+    w-full h-20"
     >
-        <div>
-            <h1 className="text-5xl">John</h1>
-        </div>
-
         {/* Hides menu when the window is small */}
-        <ul className="hidden md:flex">
+        <ul className="hidden md:flex absolute right-0">
 
             {/* TODO: make this it's own object and iterate over it? */}
             {links.map(({id, link}) => 
-                <li key={id}
-                className="px-4 cursor-pointer font-medium text-gray-300
-            hover:scale-105"
-            >{link}</li>)
+                <motion.button key={id}
+                onClick={() => console.log("here")}
+                whileHover={{ scale: 1.25 }}
+                whileTap={{ scale: 0.75 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                className='px-4 cursor-pointer font-medium text-gray-900 right-0 top-0 bottom-0'
+            >{link}
+            </motion.button>)
             }
 
         </ul>
 
         <div 
-        className="cursor-pointer pr-4 z-10 text-gray-300 md:hidden"
+        className="cursor-pointer pr-4 z-10 text-gray-900 md:hidden"
         onClick={()=> setNav(!nav)}
         >
             {nav ? <FaTimes size={30}/> : <FaBars size={30}/>}

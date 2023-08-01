@@ -1,50 +1,34 @@
 import React from "react";
-import {MdOutlineKeyboardArrowRight} from "react-icons/md";
+import {motion} from 'framer-motion';
 
 const Home = () => {
     return(
-    <div name="home" className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800">
         <div 
-        className="max-w-screen-lg mx-auto flex flex-col items-center 
-        justify-center h-full px-4 md:flex-row">
-
-            <div className="flex flex-col justify-center h-full">
-                <h2 
-                className="text-gray-100 text-4xl sm:text-7xl font-extrabold"
-                >
-                    I'm a Full Stack Developer
+        name= "home"
+        className="w-full h-screen bg-gray-100 text-gray-900">
+          
+            {/* Container */}
+            <div className="max-w-[700px] mx-auto px-8 flex flex-col justify-center h-full">
+                <p>Hi, my name is</p>
+                <h1 className="text-4xl sm:text-7xl font-bold">
+                    John Corn
+                </h1>
+                <h2 className="text-4xl sm:text-7xl font-bold">
+                    I'm a Developer
                 </h2>
-                <p 
-                className="text-gray-400 py-4 max-w-md"
-                >
-                    I have 8 years of experience building and designing software. Currently I love to work on web applications using technologies like React, Tailwind, Next JS and GraphQL. 
+                <p className="py-4 max-w-[700px]">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+          
                 </p>
+
                 <div>
-                    <button
-                    className="group text-white w-fit px-6 py-3 my-2 flex 
-                    items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 
-                    cursor-pointer"
-                    >
-                        Portfolio
-                        <span
-                        className="group-hover:rotate-90 duration-300">
-                            <MdOutlineKeyboardArrowRight 
-                                size={25}
-                                className="ml-1"
-                            />
-                            </span>
-                    </button>
+                    <button className="text-black border-2 border-black px-6 py-3 my-2 flex items-center">View Work</button>
                 </div>
-            </div>
-            <div>
-                <img 
-                src="https://ichef.bbci.co.uk/news/976/cpsprodpb/7FF7/production/_109195723_curtiswhiteside.jpg" 
-                alt="cow"
-                className="rounded-2xl mx-auto w-2/3 md:w-full"
-                />
+               
             </div>
         </div>
-    </div>
     );
 }
 

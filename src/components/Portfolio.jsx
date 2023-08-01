@@ -9,14 +9,12 @@ function Portfolio ({games, apps}){
     " hover:bg-orange-200 hover:text-black";
 
     return (
-        <div
-        className="bg-gradient-to-b from-black to-gray-800 w-full 
-        text-white h-screen"
-        >
+
+        <div className="border-2 border-green-500 w-full h-screen">
             <div
-            className="max-w-screen-lg px-4 mx-auto flex flex-col justify-center w-full h-full"
+            className="border-2 border-blue-500 bg-black max-w-screen-lg px-4 mx-auto justify-center w-full h-full"
             >
-                <div>
+                <div className="border-2 border-red-500 text-white">
                     <p
                     className="text-4xl font-bold inline border-b-4 border-gray-400"
                     >Portfolio </p>
@@ -24,7 +22,7 @@ function Portfolio ({games, apps}){
                 </div>
 
                 <div
-                className="grid sm:grid-cols-2 md:grid-cols-3 gap-8"
+                className="border-2 border-yellow-500 grid sm:grid-cols-2 md:grid-cols-3 gap-8"
                 >
                     {apps.map(({name, description, image, appLink, codeLink, role}) => (
                         <AppCard

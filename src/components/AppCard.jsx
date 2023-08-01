@@ -8,9 +8,10 @@ function AppCard({name, description, image, appLink, codeLink, role, buttonStyle
     }
 
     return (
-        <div className="bg-white placeholder:shadow-md rounded-xl flex flex-1 flex-col justify-between overflow-hidden">
+        <div 
+        className="bg-white placeholder:shadow-md rounded-xl flex flex-1 flex-col justify-between overflow-hidden">
             
-            <div className="">
+            <div className="border-2 border-blue-800">
                 <img className="shadow-lg shadow-black/20"
                 src={image} 
                 alt={name}
@@ -27,8 +28,12 @@ function AppCard({name, description, image, appLink, codeLink, role, buttonStyle
             <div className="grid grid-cols-2 justify-center items-center">
                     <button 
                         class={buttonStyle}
-                        onClick={() => openInNewTab({codeLink})}
-                    >code
+                    >
+                        <a
+                            href={codeLink}
+                            target="_blank"
+                            rel="noreferrer"
+                        >code</a>
                     </button>
 
                     <button 
