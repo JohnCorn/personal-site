@@ -13,10 +13,10 @@ export default function WorkCard(
 }) 
 {
   return (
-    <div className='text-gray-50 bg-[#18191C] container rounded-[32px] flex justify-center items-center mx-auto'>
+    <div className='text-gray-950 bg-white shadow-lg shadow-gray-400 container rounded-[42px] flex justify-center items-center mx-auto'>
 
-        <div className='p-4 mt-2'>
-        <div className='h-full aspect-square rounded-3xl items-center justify-center overflow-hidden'>
+        <div>
+        <div className='mt-3 m-2 h-full aspect-square items-center justify-center overflow-hidden rounded-[32px]'>
             <img  
             src={image} 
             alt={name}
@@ -25,19 +25,19 @@ export default function WorkCard(
         </div>
 
         <div className='h-full w-full justify-center mt-6 px-5'>
-            <h1 className='text-2xl font-semibold tracking-wider'>
+            <h1 className='text-3xl font-bold tracking-wider'>
                 {name}
             </h1>
-            <p className='text-gray-400 font-semibold mt-2'>{description}</p>
+            <p className='text-gray-600 mt-2'>{description}</p>
 
-            <div className='flex justify-around mt-8'>
+            <div className='flex justify-around mt-8 mb-4'>
                 <a 
                 href="/">
-                    <button className='text-center rounded-2xl px-8 py-4 m-2 bg-[#1649FF] text-md'>demo</button>
+                    <button className='text-center text-lg font-semibold border-gray-950 border-2 px-6 py-3 m-2'>demo</button>
                 </a>
                 <a 
                 href="/">
-                    <button className='text-center rounded-2xl px-8 py-4 m-2 bg-[#1649FF] text-md'>code</button>
+                    <button className='text-center text-lg font-semibold border-gray-950 border-2 px-6 py-3 m-2'>code</button>
                 </a>
             </div>
             
