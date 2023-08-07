@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function About() {
   return (
-    <div 
+    <div
     name='about'
-    className='w-full h-screen bg-red-200 text-gray-900'>
+    className='w-full h-screen bg-[#DDDEE7] text-gray-900'>
 
         <div className='flex flex-col justify-center items-center w-full h-full'>
             <div className='max-w-[1000px] w-full grid grid-cols-2 gap-8'>

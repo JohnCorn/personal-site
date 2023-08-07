@@ -8,13 +8,13 @@ const Home = () => {
         className="w-full h-screen bg-[#DDDEE7] text-gray-950">
           
             {/* Container */}
-            <div className="max-w-[700px] mx-auto px-8 flex flex-col justify-center h-full">
+            <div className="max-w-[700px] mx-auto px-8 font-semi-text-xl bold flex flex-col justify-center h-full">
                 <p>Hi, my name is</p>
-                <h1 className="text-4xl sm:text-7xl font-bold">
-                    John Corn
+                <h1 className="text-7xl lg:text-6xl font-bold">
+                    John Corn.
                 </h1>
-                <h2 className="text-4xl sm:text-7xl font-bold">
-                    I'm a Developer
+                <h2 className="text-7xl lg:text-6xl font-bold">
+                    I'm a Front-End Developer.
                 </h2>
                 <p className="py-4 max-w-[700px]">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
@@ -24,7 +24,20 @@ const Home = () => {
                 </p>
 
                 <div>
-                    <button className="text-black border-2 border-black px-6 py-3 my-2 flex items-center">View Work</button>
+                    <motion.button 
+                    whileHover={{
+                        scale: 1.125,         
+                        color: "black",
+                        backgroundColor: "white",
+                        border: "white"
+                      }}
+                        transition={{ type: "spring",}}
+             
+          
+                      whileTap={{ scale: 0.9 }}
+                    className="text-black border-2 rounded-md border-black px-6 py-3 my-2 flex items-center">
+                        View Work
+                    </motion.button>
                 </div>
                
             </div>

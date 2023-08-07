@@ -1,6 +1,9 @@
 import React from 'react'
 import WorkCard from './WorkCard'
-export default function Work({apps}) {
+import apps from '../../app_data';
+
+export default function Work() {
+
     return (
         <div 
             name='work'
@@ -13,7 +16,7 @@ export default function Work({apps}) {
                 </div>
 
             {/* Container */}
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mx-4'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 mx-4'>
                 
                 {/* Card */}
                 {apps.map((app) => (
