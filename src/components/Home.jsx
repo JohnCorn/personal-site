@@ -1,5 +1,7 @@
 import React from "react";
 import {motion} from 'framer-motion';
+import {Link} from 'react-scroll'
+import { BsLinkedin, BsGithub } from "react-icons/bs";
 
 const Home = () => {
     return(
@@ -14,30 +16,69 @@ const Home = () => {
                     John Corn.
                 </h1>
                 <h2 className="text-7xl lg:text-6xl font-bold">
-                    I'm a Front-End Developer.
+                    I'm a Software Developer.
                 </h2>
                 <p className="py-4 max-w-[700px]">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-          
+                I'm a software designer/developer base in new york city.
+                I have over a decade of experence prototyping and building 
+                interactive experiences for dozens of clients.
+                I love minimal and brutalist design. My passion are pizza and art.
+
                 </p>
 
                 <div>
-                    <motion.button 
-                    whileHover={{
-                        scale: 1.125,         
-                        color: "black",
-                        backgroundColor: "white",
-                        border: "white"
-                      }}
-                        transition={{ type: "spring",}}
-             
-          
-                      whileTap={{ scale: 0.9 }}
-                    className="text-black border-2 rounded-md border-black px-6 py-3 my-2 flex items-center">
-                        View Work
-                    </motion.button>
+                    <ul className="flex grid-flow-col items-center justify-around">
+
+                        <motion.a
+                        href="https://github.com/JohnCorn"
+                        target="_blank" 
+                        rel="noreferrer"
+                        initial={{ color: "#030712"}}
+
+                        whileHover={{
+                            scale: 1.25,         
+                            color: "#9E46AB"
+                            }}
+    
+                        whileTap={{ scale: 0.9 }}
+                        >
+                            <BsGithub  size={45}/>
+                        </motion.a>
+
+                        <motion.a
+                        href="https://www.linkedin.com/in/johncornacchioli/"
+                        target="_blank" 
+                        rel="noreferrer"
+                        initial={{ color: "#030712"}}
+
+                        whileHover={{
+                            scale: 1.125,         
+                            color: "#0A66C2"
+                        }}
+            
+                        whileTap={{ scale: 0.9 }}
+                        >
+                            <BsLinkedin size={45}/>
+                         </motion.a>
+
+                        <Link to='work' smooth={true} offset={50} duration={500}> 
+                            <motion.li 
+                                initial={{ 
+                        
+                                }}
+
+                                whileHover={{
+                                    scale: 1.125,      
+    
+                                }}
+
+                                whileTap={{ scale: 0.9 }}
+                                className="font-bold border-2 border-black text-center text-xl rounded-lg py-2 px-2 flex items-center"
+                                >
+                               MY WORK
+                            </motion.li>
+                        </Link>   
+                    </ul>
                 </div>
                
             </div>

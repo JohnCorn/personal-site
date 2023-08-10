@@ -5,11 +5,11 @@ function WorkCard({app:{image, name, description, button}})
 {
 
   return (
-    <div className='relative bg-gradient-to-b from-gray-100  to-gray-900 shadow-lg shadow-gray-600 mt-3 mx-4 h-full items-center justify-center overflow-hidden rounded-xl'>
+    <div className='relative bg-gradient-to-b from-white to-black shadow-lg shadow-gray-600 mt-3 mx-4 h-full items-center justify-center overflow-hidden rounded-xl'>
         <img  
         src={image} 
         alt={name}
-        className='object-cover h-full w-full  mix-blend-multiply'
+        className='object-cover h-full w-full mix-blend-multiply'
         /> 
 
         <div className='absolute bottom-0 w-full px-5 py-4'>
@@ -17,7 +17,7 @@ function WorkCard({app:{image, name, description, button}})
                 <p>{name}</p>
             </div>
 
-            <div className='mt-3'>
+            <div className='mt-3 flex flex-row gap-5'>
                 {button.map((a) => (
 
                     <WorkCardBtn
